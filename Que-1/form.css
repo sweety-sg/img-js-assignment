@@ -1,0 +1,21 @@
+body{
+    margin: 50px 50px;
+}
+select{
+    height:3.5rem;
+}
+option{
+    text-align: center;
+}
+.btn{
+    background-color: rgb(1, 121, 121);
+    color: white;
+    height: 4.5rem;
+    width: 9rem;
+}
+.btn:hover{
+    background-color: rgb(4, 156, 156);
+}
+span{
+    color: red;
+}

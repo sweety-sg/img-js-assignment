@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>12-event-button</title>
+</head>
+<body style="font-size: 24px; line-height: 70px; justify-content: center; display: flex;">
+    <input type="button" class="btn" style="width: 200px; height: 200px; background-color: burlywood;">
+    <script>
+       const btn = document.querySelector(".btn");
+       btn.addEventListener("click",()=>{
+        document.bgColor = "lightblue";
+       })
+    </script>
+</body>
+</html>

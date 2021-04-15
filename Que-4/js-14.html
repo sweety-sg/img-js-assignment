@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>14-function</title>
+<script>
+    var i = 0;
+    const imge = document.getElementById("tbbt");
+   function changeimg(){
+    i++;
+    if(i==1){
+        document.getElementById("tbbt").src ="https://media1.popsugar-assets.com/files/thumbor/k0ejgYkT9FezFJcmX-pQFFu-Ttk/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2017/05/31/987/n/1922283/d32cb5b2592f46ac064b53.02320979_edit_img_image_43590181_1496190211/i/Big-Bang-Theory-Sheldon-Funniest-Moments.jpg"
+    }
+    if(i==2){
+        document.getElementById("tbbt").src= "https://i.pinimg.com/564x/e2/fe/18/e2fe189e6ee51d6b384c51b02ddb0539.jpg";
+    }
+    if(i==3){
+        document.getElementById("tbbt").src= "https://i.pinimg.com/originals/ad/21/e0/ad21e0396d05f810dcdec29555f34311.jpg";
+    }
+    if(i==4){
+        document.getElementById("tbbt").src= "https://m.media-amazon.com/images/M/MV5BMTQzODgxMTM5M15BMl5BanBnXkFtZTgwMDYzMTY1MjE@._V1_UY1200_CR485,0,630,1200_AL_.jpg";
+    }
+   }    
+</script>
+</head>
+<body>
+    <img src="https://mypostercollection.com/wp-content/uploads/2018/03/Big-bang-theory-poster.jpg" width="400" id="tbbt" onclick="changeimg()">
+</body>
+</html>

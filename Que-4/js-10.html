@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>10-event</title>
+</head>
+<body style="font-size: 24px; line-height: 70px; justify-content: space-around; display: flex; flex-wrap: wrap;">
+    <img src="https://hips.hearstapps.com/digitalspyuk.cdnds.net/17/01/1483885363-holiday-summation-big-bang.jpg?crop=0.668xw:1.00xh;0.332xw,0&resize=480:*" id="sheldon" height="500">
+    <img src= "https://i.pinimg.com/564x/e2/fe/18/e2fe189e6ee51d6b384c51b02ddb0539.jpg" height="500" id="leonard">
+    <img src="https://i.pinimg.com/originals/ad/21/e0/ad21e0396d05f810dcdec29555f34311.jpg" height="500" id="penny">
+    <img src="https://mypostercollection.com/wp-content/uploads/2018/03/Big-bang-theory-poster.jpg" width="400" id="tbbt">
+   <script>
+      const image1 = document.querySelector("#sheldon");
+      image1.addEventListener("mouseover",(e)=>{
+          image1.setAttribute("src" , "https://media1.popsugar-assets.com/files/thumbor/k0ejgYkT9FezFJcmX-pQFFu-Ttk/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2017/05/31/987/n/1922283/d32cb5b2592f46ac064b53.02320979_edit_img_image_43590181_1496190211/i/Big-Bang-Theory-Sheldon-Funniest-Moments.jpg");
+          
+      })
+      image1.addEventListener("mouseout",(e)=>{
+          image1.setAttribute("src" , "https://hips.hearstapps.com/digitalspyuk.cdnds.net/17/01/1483885363-holiday-summation-big-bang.jpg?crop=0.668xw:1.00xh;0.332xw,0&resize=480:*");
+          
+      });
+
+    
+      const image2 = document.querySelector("#leonard");
+      image2.addEventListener("mouseover",(e)=>{
+          image2.setAttribute("src" , "https://m.media-amazon.com/images/M/MV5BMTQzODgxMTM5M15BMl5BanBnXkFtZTgwMDYzMTY1MjE@._V1_UY1200_CR485,0,630,1200_AL_.jpg");
+          
+      })
+      image2.addEventListener("mouseout",(e)=>{
+          image2.setAttribute("src" , "https://i.pinimg.com/564x/e2/fe/18/e2fe189e6ee51d6b384c51b02ddb0539.jpg");
+          
+      })
+
+      const image3 = document.querySelector("#penny");
+      image3.addEventListener("mouseover",(e)=>{
+          image3.setAttribute("src" , "https://i.pinimg.com/originals/66/83/06/6683063c9f16e5ec6c7cb2c259240fbd.jpg");
+          
+      })
+      image3.addEventListener("mouseout",(e)=>{
+          image3.setAttribute("src" , "https://i.pinimg.com/originals/ad/21/e0/ad21e0396d05f810dcdec29555f34311.jpg");
+          
+      })
+
+      const image =document.querySelector("#tbbt");
+      image.addEventListener("mouseover", ()=>{
+        image1.setAttribute("src" , "https://media1.popsugar-assets.com/files/thumbor/k0ejgYkT9FezFJcmX-pQFFu-Ttk/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2017/05/31/987/n/1922283/d32cb5b2592f46ac064b53.02320979_edit_img_image_43590181_1496190211/i/Big-Bang-Theory-Sheldon-Funniest-Moments.jpg");
+        image2.setAttribute("src" , "https://m.media-amazon.com/images/M/MV5BMTQzODgxMTM5M15BMl5BanBnXkFtZTgwMDYzMTY1MjE@._V1_UY1200_CR485,0,630,1200_AL_.jpg");
+        image3.setAttribute("src" , "https://i.pinimg.com/originals/66/83/06/6683063c9f16e5ec6c7cb2c259240fbd.jpg");
+      })
+
+      image.addEventListener("mouseout", ()=>{
+        image1.setAttribute("src" , "https://hips.hearstapps.com/digitalspyuk.cdnds.net/17/01/1483885363-holiday-summation-big-bang.jpg?crop=0.668xw:1.00xh;0.332xw,0&resize=480:*");
+        image2.setAttribute("src" , "https://i.pinimg.com/564x/e2/fe/18/e2fe189e6ee51d6b384c51b02ddb0539.jpg");
+        image3.setAttribute("src" , "https://i.pinimg.com/originals/ad/21/e0/ad21e0396d05f810dcdec29555f34311.jpg");
+      })
+    </script>
+    
+</body>
+</html>

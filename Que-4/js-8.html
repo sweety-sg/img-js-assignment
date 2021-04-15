@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>8-event</title>
+</head>
+<body style="font-size: 24px; line-height: 70px; justify-content: center; display: flex;">
+    <img src="https://qph.fs.quoracdn.net/main-qimg-0bc2b44a247863765e79db94f5793d63" id="img" height="600">
+   <script>
+      const image = document.querySelector("#img");
+      image.addEventListener("mouseover",(e)=>{
+          image.setAttribute("src" , "https://miro.medium.com/max/1440/1*8pIjOGrUS4OMmwl1smGmEA.jpeg");
+          
+      })
+      image.addEventListener("mouseout",(e)=>{
+          image.setAttribute("src" , "https://qph.fs.quoracdn.net/main-qimg-0bc2b44a247863765e79db94f5793d63");
+          
+      })
+    </script>
+    
+</body>
+</html>

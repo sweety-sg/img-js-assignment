@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>15-slideshow</title>
+</head>
+<body style="font-size: 24px; line-height: 70px; justify-content: center; display: flex; flex-direction: column; align-items: center;">
+    <img src="https://mypostercollection.com/wp-content/uploads/2018/03/Big-bang-theory-poster.jpg" height="600" width="400" id="tbbt">
+    <form>
+        <input type = "button" onclick="backward()" value="<backward" class= "bwd" style="width: 100px; height: 50px; background-color: burlywood; outline: none; display:none;">
+        <input type = "button" onclick="forward()" value="forward>" class= "fwd" style="width: 100px; height: 50px; background-color: burlywood; outline: none;">
+        
+    </form>
+    <script>
+        var i =1;
+        var fwd = document.querySelector(".fwd");
+        var bwd = document.querySelector(".bwd");
+        var image = document.querySelector("img");
+        function forward(){
+            bwd.style.display = "inline-block"
+
+            i++;
+            if(i==2){
+                image.src = "https://m.media-amazon.com/images/M/MV5BMTQzODgxMTM5M15BMl5BanBnXkFtZTgwMDYzMTY1MjE@._V1_UY1200_CR485,0,630,1200_AL_.jpg"
+                
+            }
+            if(i==3){
+                image.src ="https://i.pinimg.com/originals/66/83/06/6683063c9f16e5ec6c7cb2c259240fbd.jpg"
+                
+            }
+            if(i==4){
+                image.src="https://i.pinimg.com/564x/e2/fe/18/e2fe189e6ee51d6b384c51b02ddb0539.jpg"
+                
+            }
+            if(i==5){
+                image.src= "https://i.pinimg.com/originals/ad/21/e0/ad21e0396d05f810dcdec29555f34311.jpg"
+                fwd.style.display = "none"
+
+            }
+            
+        }
+        function backward(){
+            fwd.style.display = "inline-block"
+            i--;
+            if(i==1){
+                image.src="https://mypostercollection.com/wp-content/uploads/2018/03/Big-bang-theory-poster.jpg"
+                bwd.style.display = "none"
+            }
+            if(i==2){
+                image.src = "https://m.media-amazon.com/images/M/MV5BMTQzODgxMTM5M15BMl5BanBnXkFtZTgwMDYzMTY1MjE@._V1_UY1200_CR485,0,630,1200_AL_.jpg"
+            }
+            if(i==3){
+                image.src ="https://i.pinimg.com/originals/66/83/06/6683063c9f16e5ec6c7cb2c259240fbd.jpg"
+            }
+            if(i==4){
+                image.src="https://i.pinimg.com/564x/e2/fe/18/e2fe189e6ee51d6b384c51b02ddb0539.jpg"
+            }
+            
+        }
+    </script>
+</body>
+</html>

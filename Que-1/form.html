@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign-up</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="form.css">
+    </head>
+    <body>
+        <h2>SIGN-UP</h2>
+        <br><span id="incomplete-error"></span><br>
+        <form onsubmit="return process()">
+
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name">
+              </div>
+
+              <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" class="form-control" id="age">
+              </div>
+  
+              <div class="form-group">
+                <label for="gender">Gender:</label>
+                <input type="text" class="form-control" id="gender">
+              </div>
+
+
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="text" class="form-control" id="email">
+              <span id="emailerror"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="pwd">Password:</label>
+              <input type="password" class="form-control" id="pwd" autocomplete="on">
+              <span id="pwderror"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="pwd2">Confirm password:</label>
+                <input type="password" class="form-control" id="pwd2" autocomplete="on">
+                <span id="pwd2error"></span>
+              </div>
+
+            
+  
+              <div class="form-group">
+                <label for="phn-no">Phone number:</label>
+                <input type="number" class="form-control" id="phn-no">
+                <span id="phnerror"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" class="form-control" id="city">
+              </div>
+
+              <div class="form-group">
+                  <label for= "education-qualification">Educational Qualification</label>
+                  <select id="eq" name="select">
+                      <option>Bachelor's</option>
+                      <option>Master's</option>
+                      <option>Honours</option>
+                      <option>Doctoral</option>
+                      <option>Higher Secondary School</option>
+                  </select>
+              </div>
+
+            <div class="checkbox">
+              <label><input type="checkbox"> Remember me</label>
+            </div>
+            <br><br>
+
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          
+          <script src="form.js"></script>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>19-cookies</title>
+</head>
+<body>
+    <script>
+        cookieUse();
+        function cookieUse(){
+            var visits = GetCookie("counter");
+            visits = parseInt(visits) + 1;
+            document.write(" You have visited"+ visits+ "number of times!");
+        }
+    </script>
+</body>
+</html>

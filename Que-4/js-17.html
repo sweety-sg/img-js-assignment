@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>17-window</title>
+</head>
+<body>
+    <script>
+        
+       function open(){
+        newWindow = window.open(
+              "http://www.geeksforgeeks.org/",
+                "_blank", "width=400, height=450");  
+        // newWindow = window.open("https://www.google.com",  "", "fullscreen=yes");
+        // window.open("https://www.google.com", "_blank","width=400, height=450");
+       }
+       function close(){
+           newWindow.close();
+        }
+    </script>
+    <img src="https://mypostercollection.com/wp-content/uploads/2018/03/Big-bang-theory-poster.jpg" height="600" width="400" id="tbbt" onclick="open()">
+    <form>
+    <input type="button" value="close the google window" onclick="close()">
+    </form>
+</body>
+</html>
