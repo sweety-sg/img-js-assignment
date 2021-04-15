@@ -8,7 +8,7 @@
     <body>
         <h2>SIGN-UP</h2>
         <br><span id="incomplete-error"></span><br>
-        <form onsubmit="return process()">
+        <form>
             <div class="form-group">
               <label for="email">Email address:</label>
               <input type="text" class="form-control" id="email">
@@ -22,8 +22,9 @@
             <div class="checkbox">
               <label><input type="checkbox"> Remember me</label>
             </div>
-            <button type="submit" class="btn btn-default">Submit</button>
+            
           </form>
+          <button class="btn" onclick="process()">Submit</button>
 
 
           <script src="request.js"></script>

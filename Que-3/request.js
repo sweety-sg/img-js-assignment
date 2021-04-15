@@ -45,7 +45,7 @@ function process(){
     console.log(xhr.readyState);
     xhr.open("POST",url);
     console.log(xhr.readyState);
-    xhr.setRequestHeader( 'Content-Type', 'application/xml;charset=UTF-8' );
+    xhr.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
     console.log(xhr.readyState);
     xhr.send(`email=${email}&password=${pwd}`);
     console.log(xhr.readyState);
@@ -60,9 +60,10 @@ function process(){
           } 
           else if( this.readyState==4 && this.status !=200){
               console.log(xhr.status);
-              alert("login unsuccessful" + this.status);
+              alert("login unsuccessful" + " error: "+ this.status);
           }
+          
     }
 
-    
+    return true;
 }

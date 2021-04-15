@@ -5,12 +5,42 @@
 </head>
 <body>
     <script>
-        cookieUse();
-        function cookieUse(){
-            var visits = GetCookie("counter");
-            visits = parseInt(visits) + 1;
-            document.write(" You have visited"+ visits+ "number of times!");
-        }
+        
+       var visit = localStorage.getItem("visits");
+            var neededcookie = localStorage.getItem("datee");
+            var firstvisitdate;
+            var newdate;
+            var ex;
+            var count = 0;
+            if(neededcookie==null){
+                count = 1;
+                firstvisitdate = new Date();
+                newdate = firstvisitdate.toString();
+                // document.cookie = "You have visited" + visits +";You last visited on" + firstvisitdate;
+                // var firstvisitinfo = document.cookie
+                localStorage.setItem("datee", newdate);
+                neededcookie = localStorage.getItem("datee");
+                localStorage.setItem("visits", 1);
+                alert("You have visited the page 1 time !");
+                console.log("ok" +firstvisitdate);
+            }
+            else{
+                
+                    
+                    visit++;
+                    
+                    alert("You have visited this page "+visit+ " number of times. you last visited on" + neededcookie) ;
+                    firstvisitdate = new Date();
+                    ex = firstvisitdate.getDate()
+                    newdate = firstvisitdate.toString();
+                    console.log(neededcookie);
+                    localStorage.setItem("datee", newdate);
+                    localStorage.setItem("visits", visit );
+                    
+                
+            
+            }
+            
     </script>
 </body>
 </html>

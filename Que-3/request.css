@@ -10,4 +10,10 @@ span{
     color: red;
     height: 2rem;
 }
+.btn{
+    margin: 2rem;
+    background: rgb(0, 105, 119);
+    color: white;
+    padding: 1rem;
+}
 

@@ -1,25 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>17-window</title>
+<script>
+    var newWindow;
+   function openwin(){
+    newWindow = window.open("https://www.google.com/", "_blank");  
+    } 
+  
+   
+   function closewin(){
+       newWindow.close();
+    }
+</script>
 </head>
 <body>
-    <script>
-        
-       function open(){
-        newWindow = window.open(
-              "http://www.geeksforgeeks.org/",
-                "_blank", "width=400, height=450");  
-        // newWindow = window.open("https://www.google.com",  "", "fullscreen=yes");
-        // window.open("https://www.google.com", "_blank","width=400, height=450");
-       }
-       function close(){
-           newWindow.close();
-        }
-    </script>
-    <img src="https://mypostercollection.com/wp-content/uploads/2018/03/Big-bang-theory-poster.jpg" height="600" width="400" id="tbbt" onclick="open()">
-    <form>
-    <input type="button" value="close the google window" onclick="close()">
-    </form>
+   
+    <img src="https://mypostercollection.com/wp-content/uploads/2018/03/Big-bang-theory-poster.jpg" height="600" width="400" id="tbbt" onclick="openwin()">
+
+    <button onclick="closewin()">
+        Close google
+    </button>
 </body>
 </html>
