@@ -8,7 +8,7 @@
     <body>
         <h2>SIGN-UP</h2>
         <br><span id="incomplete-error"></span><br>
-        <form onsubmit="return process()">
+        <form onsubmit="process()">
 
             <div class="form-group">
                 <label for="name">Name:</label>
@@ -28,19 +28,19 @@
 
             <div class="form-group">
               <label for="email">Email:</label>
-              <input type="text" class="form-control" id="email">
+              <input type="text" class="form-control" id="email" onkeyup="emailf()">
               <span id="emailerror"></span>
             </div>
 
             <div class="form-group">
               <label for="pwd">Password:</label>
-              <input type="password" class="form-control" id="pwd" autocomplete="on">
+              <input type="password" class="form-control" id="pwd" autocomplete="on" onkeyup="pwdf()">
               <span id="pwderror"></span>
             </div>
 
             <div class="form-group">
                 <label for="pwd2">Confirm password:</label>
-                <input type="password" class="form-control" id="pwd2" autocomplete="on">
+                <input type="password" class="form-control" id="pwd2" autocomplete="on" onkeyup="pwd2f()">
                 <span id="pwd2error"></span>
               </div>
 
@@ -48,7 +48,7 @@
   
               <div class="form-group">
                 <label for="phn-no">Phone number:</label>
-                <input type="number" class="form-control" id="phn-no">
+                <input type="number" class="form-control" id="phn-no" onkeyup="phnf()">
                 <span id="phnerror"></span>
               </div>
 
