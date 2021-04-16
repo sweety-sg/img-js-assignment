@@ -67,3 +67,10 @@ function process(){
 
     return true;
 }
+
+document.addEventListener("keyup", function(e) {
+    if (e.key === 'Enter') {
+      document.getElementById("submit").click();
+    }
+  });
+ 

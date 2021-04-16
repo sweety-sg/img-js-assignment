@@ -1,67 +1,98 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>16-Marbles</title>
-</head>
-<body style="font-size: 24px; line-height: 70px; justify-content: center; display: flex;  align-items: center;">
-    <table>
-
-
-        <tbody><tr valign="top" align="center"><td>
-        <img src="https://freesvg.org/img/orange-jewel2.png" height="90">
+    <head>
+        <title>16-marbles</title>
+    </head>
+    <body>
         
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type=button onclick="action()" value="START ANIMATION">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Sphere_-_monochrome_simple.svg/1024px-Sphere_-_monochrome_simple.svg.png" id="black0" class="black0" height="90" style="position:absolute;left: 870px; top: 400px; " onmouseover="stop()" onmouseout="start()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Sphere_-_monochrome_simple.svg/1024px-Sphere_-_monochrome_simple.svg.png" id="black1" class="black1" height="90" style="position:absolute; left: 760px; top: 590px; " onmouseover="stop()" onmouseout="start()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Sphere_-_monochrome_simple.svg/1024px-Sphere_-_monochrome_simple.svg.png" id="black2" class="black2" height="90" style="position:absolute; left: 540px; top: 590px; " onmouseover="stop()" onmouseout="start()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Sphere_-_monochrome_simple.svg/1024px-Sphere_-_monochrome_simple.svg.png" id="black3" class="black3" height="90" style="position:absolute; left: 430px; top: 400px; " onmouseover="stop()" onmouseout="start()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Sphere_-_monochrome_simple.svg/1024px-Sphere_-_monochrome_simple.svg.png" id="black4" class="black4" height="90" style="position:absolute; left: 539px; top: 209px; " onmouseover="stop()" onmouseout="start()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Sphere_-_monochrome_simple.svg/1024px-Sphere_-_monochrome_simple.svg.png" id="black5" class="black5" height="90" style="position:absolute;  left: 760px; top: 209px; " onmouseover="stop()" onmouseout="start()">
+        <img src="https://freesvg.org/img/orange-jewel2.png" id="orange" height="96" style="position:absolute; left: 650px; top: 400px; z-index: 1;" onmouseover="stop()" onmouseout="start()">
         
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Sphere_-_monochrome_simple.svg/1024px-Sphere_-_monochrome_simple.svg.png" height="90">
-        </td></tr>
+        <script>
+            var x = new Array();
+            var y = new Array();
+            var xc = 650;
+            var yc = 400;
+            var i=0;
+            var c=0;
+            var ex =0;
+            var r = 220;
+            var leftp = document.getElementById('orange').style.offsetLeft ;
+            var leftpix = document.getElementById('orange').style.left;
+            var topp = document.getElementById('orange').style.offsetTop ;
+            var toppix = document.getElementById('orange').style.top;
+            // var left1 = document.getElementById('black1').style.left;
+            // var top1 = document.getElementById('black1').style.top;
+            console.log(leftp);
+           
+            for(i=0 ; i<=180 ; i+=30)
+                {
+                    
+                    x[i] = Math.floor( xc + r*Math.cos((Math.PI*i)/90));
+                    console.log("x "+ x[i]);
+                    y[i] = Math.floor( yc +r*Math.sin((Math.PI*i)/90));
+                    console.log("y "+ y[i]);
+                    
+                }
+                
         
-        <tr valign="top" align="center"><td>
-        <br>
-        </td></tr>
-        
-        
-        <tr valign="top" align="center"><td>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Sphere_-_monochrome_simple.svg/1024px-Sphere_-_monochrome_simple.svg.png" height="90">
-        
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Sphere_-_monochrome_simple.svg/1024px-Sphere_-_monochrome_simple.svg.png" height="90">
-        
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Sphere_-_monochrome_simple.svg/1024px-Sphere_-_monochrome_simple.svg.png" height="90">
-        </td></tr>
-        
-        <tr valign="top" align="center"><td>
-        <br>
-        </td></tr>
-        
-        
-        
-        <tr valign="top" align="center"><td>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Sphere_-_monochrome_simple.svg/1024px-Sphere_-_monochrome_simple.svg.png" height="90">
-        
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Sphere_-_monochrome_simple.svg/1024px-Sphere_-_monochrome_simple.svg.png" height="90">
-        </td></tr>
-        
-        
-        </tbody></table>
 
 
 
-
-    <script>
-       var td= document.getElementsByTagName("td");
-       
-       function animate(){
-           var i=0;
+        function stop(){
+            ex = 1;
+            clearTimeout(timeOut);
+            random();
+        }
+        function start(){
+            clearTimeout(timeOut);
+            ex = 0;
+            // random();
+            action();
+        }
+             function change(c){
+                 leftp = x[c];
+                 leftpix= x[c] + "px"; 
+                 topp = y[c];
+                 rightpix= y[c] + "px"; 
+                 
+                 return (c+30);
+             }  
+             function again(){
+                 clearTimeout(timeOut);
+                 constraint();
+             }
+            function random(){
+                clearTimeout(timeOut)
+                if (ex==1){
+                    leftpix = x[c]+"px";
+                toppix = y[c]+"px";
+                }
+                else{
+                    action();
+                }
+            }
+            function action(){
+               timeOut =  setTimeout(function(){  
+                change(c);
+                 c= change(c);
+                if(c>=180){
+                    c=0;
+                }     
+                    document.getElementById("orange").style.left = x[c]+"px";
+                    document.getElementById("orange").style.top = y[c]+"px";
+                    random();
+                }, 1000)
+            }
             
-            var image = td[i].getElementsByTagName("img");
-        
-       }
-    </script>
 
-</body>
+
+        </script>
+    </body>
 </html>
