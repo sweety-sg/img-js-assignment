@@ -24,6 +24,32 @@ function genderf(){
     }
 }
 
+function agef(){
+    var age = document.getElementById('age').value;
+    var ageregex = /^[0-9]{1,3}$/g ;
+    if(ageregex.test(age)&&(age>=13)&&(age<150)){
+        document.getElementById('ageerror').innerHTML = " ";
+        return true;
+    }
+    else{
+        document.getElementById('ageerror').innerHTML = "Age is invalid or less than 13";
+        return false;
+    }
+}
+
+function cityf(){
+    var city = document.getElementById('city').value;
+    var cityregex = /^(?=.*[a-zA-Z])(\w*\s*\w+)*$/g ;
+    if(cityregex.test(city)){
+        document.getElementById('cityerror').innerHTML = " ";
+        return true;
+    }
+    else{
+        document.getElementById('cityerror').innerHTML = "city is invalid";
+        return false;
+    }
+}
+
 function emailf(){
     var email = document.getElementById('email').value;
     var emailregex = /^\w[\w_.]*@[A-Za-z]+(\.[A-Za-z]+)+$/g ;
@@ -64,7 +90,7 @@ function pwd2f(){
 }
 function phnf(){
     var phn = document.getElementById('phn-no').value;
-    var phnregex = /(\+91?)?(91)?[6789]\d{9}/g;
+    var phnregex = /^((\+91)|(91)|(0))?[6789][0-9]{9}$/;
     if(phnregex.test(phn)){
         document.getElementById('phnerror').innerHTML = " ";
         return true;

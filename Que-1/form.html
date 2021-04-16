@@ -18,13 +18,17 @@
 
               <div class="form-group">
                 <label for="age">Age:</label>
-                <input type="number" class="form-control" id="age">
+                <input type="number" class="form-control" id="age" onkeyup="agef()">
+                <span id="ageerror"></span>
               </div>
   
               <div class="form-group">
                 <label for="gender">Gender:</label>
-                <input type="text" class="form-control" id="gender" onkeyup="genderf()">
-                <span id="gendererror"></span>
+                <select id="eq" name="select">
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Others</option>
+              </select>
               </div>
 
 
@@ -50,13 +54,14 @@
   
               <div class="form-group">
                 <label for="phn-no">Phone number:</label>
-                <input type="number" class="form-control" id="phn-no" onkeyup="phnf()">
+                <input type="text" class="form-control" id="phn-no" onkeyup="phnf()">
                 <span id="phnerror"></span>
               </div>
 
               <div class="form-group">
                 <label for="city">City:</label>
-                <input type="text" class="form-control" id="city">
+                <input type="text" class="form-control" id="city" onkeyup="cityf()">
+                <span id="cityerror"></span>
               </div>
 
               <div class="form-group">
