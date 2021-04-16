@@ -1,4 +1,28 @@
+function namef(){
+    var name = document.getElementById('name').value;
+    var nameregex = /^[a-zA-Z]+[a-zA-Z \s ,.'-]*[a-zA-Z']+$/g ;
+    if(nameregex.test(name)){
+        document.getElementById('nameerror').innerHTML = " ";
+        return true;
+    }
+    else{
+        document.getElementById('nameerror').innerHTML = "Name is invalid";
+        return false;
+    }
+}
 
+function genderf(){
+    var gender = document.getElementById('gender').value;
+    var genderregex = /^[a-zA-Z\s-]+$/g ;
+    if(genderregex.test(gender)){
+        document.getElementById('gendererror').innerHTML = " ";
+        return true;
+    }
+    else{
+        document.getElementById('gendererror').innerHTML = "Enter a valid gender";
+        return false;
+    }
+}
 
 function emailf(){
     var email = document.getElementById('email').value;
@@ -40,7 +64,7 @@ function pwd2f(){
 }
 function phnf(){
     var phn = document.getElementById('phn-no').value;
-    var phnregex = /(\+91?)?[0]?(91)?[6789]\d{9}/g;
+    var phnregex = /(\+91?)?(91)?[6789]\d{9}/g;
     if(phnregex.test(phn)){
         document.getElementById('phnerror').innerHTML = " ";
         return true;
